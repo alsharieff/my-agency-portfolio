@@ -1,4 +1,4 @@
-import { agencyData } from "../data/portfolioData";
+import { agencyData } from "../../data/portfolioData";
 
 export default function Work() {
   return (

@@ -1,5 +1,5 @@
 export const agencyData = {
-  name: "AURA",
+  name: "devSharl",
   tagline: "Digital Design & Development Lab",
   heroTitle: "We craft high-impact digital experiences.",
   heroSubtitle:

@@ -1,5 +1,4 @@
-import { agencyData } from "../data/portfolioData";
-
+import { agencyData } from "../../data/portfolioData";
 export default function Footer() {
   return (
     <footer className="py-8 text-center text-xs text-slate-500 border-t border-slate-800/50">
