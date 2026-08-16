@@ -5,6 +5,7 @@ import Work from "../components/sections/Work";
 import Contact from "../components/sections/Contact";
 import FeaturedCarousel from "../components/sections/FeaturedWorkCarousel";
 import About from "../components/sections/About";
+import CTAButton from "../components/sections/CTA-Button";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Featured />
       <FeaturedCarousel />
       <About />
+      <CTAButton />
       <Contact />
     </>
   );

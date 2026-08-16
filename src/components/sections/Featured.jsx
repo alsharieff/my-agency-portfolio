@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { Smartphone, Layout, Zap, Code2, FileCheck } from "lucide-react";
 
 import featuredImg from "../../assets/featured.webp";
+import pagespeed from "../../assets/pagespeed.webp";
+import semantic from "../../assets/semantic.webp";
+import metadata from "../../assets/metadata.webp";
+import mobilefirst from "../../assets/mobilefirst.webp";
 
-const fallbackMobileImg =
-  "https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const fallbackMobileImg = mobilefirst;
 
 // High-tech, minimalist background visual links for the bottom row
-const speedBgImg =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80";
-const codeBgImg =
-  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80";
-const seoBgImg =
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80";
+const speedBgImg = pagespeed;
+const codeBgImg = semantic;
+const seoBgImg = metadata;
 
 export default function Featured() {
   const [speedTab, setSpeedTab] = useState("mobile");
@@ -95,7 +95,7 @@ export default function Featured() {
             <div className="p-2.5 rounded-lg bg-zinc-900/80 border border-zinc-800 text-emerald-400 backdrop-blur-md">
               <Zap className="w-4 h-4" />
             </div>
-            <div className="flex bg-zinc-950/90 p-0.5 rounded-md border border-zinc-800 text-[10px] font-mono backdrop-blur-md">
+            {/* <div className="flex bg-zinc-950/90 p-0.5 rounded-md border border-zinc-800 text-[10px] font-mono backdrop-blur-md">
               <button
                 onClick={() => setSpeedTab("mobile")}
                 className={`px-2 py-0.5 rounded transition-colors ${speedTab === "mobile" ? "bg-blue-600 text-white" : "text-zinc-500"}`}
@@ -108,14 +108,14 @@ export default function Featured() {
               >
                 Desktop
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Bottom Text Part - Dark gradient localized here */}
           <div className="relative z-10 flex items-baseline justify-between bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6 mt-auto">
             <div>
               <span className="text-3xl font-extrabold text-emerald-400 tracking-tight">
-                {speedTab === "mobile" ? "98" : "100"}
+                {speedTab === "mobile" ? "94" : "100"}
               </span>
               <span className="text-xs font-mono text-zinc-500 ml-1">/100</span>
             </div>

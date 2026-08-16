@@ -8,13 +8,13 @@ export default function Footer() {
         </span>
         <div className="flex gap-6">
           <a href="#" className="hover:text-slate-300 transition">
-            Twitter / X
-          </a>
-          <a href="#" className="hover:text-slate-300 transition">
-            GitHub
+            Facebook
           </a>
           <a href="#" className="hover:text-slate-300 transition">
             LinkedIn
+          </a>
+          <a href="#" className="hover:text-slate-300 transition">
+            Telegram
           </a>
         </div>
       </div>
