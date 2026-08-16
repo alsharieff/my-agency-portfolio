@@ -27,11 +27,10 @@ export default function Featured() {
           <img
             src={fallbackMobileImg}
             alt="Mobile First Architecture"
-            className="absolute inset-0 w-full h-full object-cover opacity-80 md:opacity-25 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-90 transition-all duration-500 ease-out pointer-events-none"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 ease-out pointer-events-none"
           />
-          {/* Subtle top/bottom shadow, lighter in middle for full image clarity */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080b11] via-[#080b11]/20 to-transparent pointer-events-none md:via-[#080b11]/30 md:group-hover:via-[#080b11]/10 transition-all duration-500" />
 
+          {/* Top Interface Elements */}
           <div className="relative z-10 flex items-center justify-between">
             <div className="p-2.5 rounded-lg bg-zinc-900/80 border border-zinc-800 text-blue-400 backdrop-blur-md">
               <Smartphone className="w-4 h-4" />
@@ -41,7 +40,8 @@ export default function Featured() {
             </span>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-10">
+          {/* Bottom Text Part - Dark gradient localized here */}
+          <div className="relative z-10 bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-10 mt-auto">
             <h3 className="text-sm font-semibold text-white">
               Mobile-First Standard
             </h3>
@@ -56,18 +56,18 @@ export default function Featured() {
           <img
             src={featuredImg}
             alt="Figma conversion flow"
-            className="absolute inset-0 w-full h-full object-cover object-right opacity-80 md:opacity-30 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-90 transition-all duration-500 ease-out pointer-events-none"
+            className="absolute inset-0 w-full h-full object-cover object-right opacity-80 group-hover:opacity-100 transition-opacity duration-500 ease-out pointer-events-none"
           />
-          {/* Gradient localized towards left text area only */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#080b11] via-[#080b11]/30 to-transparent pointer-events-none md:via-[#080b11]/40 md:group-hover:via-[#080b11]/20 transition-all duration-500" />
 
+          {/* Top Interface Elements */}
           <div className="relative z-10">
             <div className="p-2.5 w-fit rounded-lg bg-zinc-900/80 border border-zinc-800 text-blue-400 backdrop-blur-md">
               <Layout className="w-4 h-4" />
             </div>
           </div>
 
-          <div className="relative z-10 max-w-sm bg-gradient-to-r from-[#080b11] via-[#080b11]/90 to-transparent -ml-6 -mb-6 p-6 pt-8 rounded-tr-2xl">
+          {/* Bottom/Left Text Part - Dark gradient localized here */}
+          <div className="relative z-10 max-w-sm bg-gradient-to-r from-[#080b11] via-[#080b11]/90 to-transparent -ml-6 -mb-6 p-6 pt-8 rounded-tr-2xl mt-auto">
             <span className="text-[10px] font-mono text-blue-400 uppercase tracking-wide">
               1:1 Fidelity
             </span>
@@ -87,10 +87,10 @@ export default function Featured() {
           <img
             src={speedBgImg}
             alt="Page Speed Analytics"
-            className="absolute inset-0 w-full h-full object-cover opacity-80 md:opacity-20 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-85 transition-all duration-500 ease-out pointer-events-none"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 ease-out pointer-events-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080b11] via-[#080b11]/20 to-transparent pointer-events-none md:group-hover:via-transparent transition-all duration-500" />
 
+          {/* Top Interface Elements */}
           <div className="relative z-10 flex items-center justify-between">
             <div className="p-2.5 rounded-lg bg-zinc-900/80 border border-zinc-800 text-emerald-400 backdrop-blur-md">
               <Zap className="w-4 h-4" />
@@ -111,7 +111,8 @@ export default function Featured() {
             </div>
           </div>
 
-          <div className="relative z-10 flex items-baseline justify-between bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6">
+          {/* Bottom Text Part - Dark gradient localized here */}
+          <div className="relative z-10 flex items-baseline justify-between bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6 mt-auto">
             <div>
               <span className="text-3xl font-extrabold text-emerald-400 tracking-tight">
                 {speedTab === "mobile" ? "98" : "100"}
@@ -129,17 +130,18 @@ export default function Featured() {
           <img
             src={codeBgImg}
             alt="Semantic HTML Code"
-            className="absolute inset-0 w-full h-full object-cover opacity-80 md:opacity-20 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-85 transition-all duration-500 ease-out pointer-events-none"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 ease-out pointer-events-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080b11] via-[#080b11]/20 to-transparent pointer-events-none md:group-hover:via-transparent transition-all duration-500" />
 
+          {/* Top Interface Elements */}
           <div className="relative z-10">
             <div className="p-2.5 w-fit rounded-lg bg-zinc-900/80 border border-zinc-800 text-blue-400 backdrop-blur-md">
               <Code2 className="w-4 h-4" />
             </div>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6">
+          {/* Bottom Text Part - Dark gradient localized here */}
+          <div className="relative z-10 bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6 mt-auto">
             <h3 className="text-sm font-semibold text-white">Semantic HTML5</h3>
             <p className="text-[11px] text-zinc-400 mt-0.5">
               Clean DOM tree structured for search engines
@@ -152,17 +154,18 @@ export default function Featured() {
           <img
             src={seoBgImg}
             alt="SEO Standard Standards"
-            className="absolute inset-0 w-full h-full object-cover opacity-80 md:opacity-20 md:grayscale md:group-hover:grayscale-0 md:group-hover:opacity-85 transition-all duration-500 ease-out pointer-events-none"
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 ease-out pointer-events-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080b11] via-[#080b11]/20 to-transparent pointer-events-none md:group-hover:via-transparent transition-all duration-500" />
 
+          {/* Top Interface Elements */}
           <div className="relative z-10">
             <div className="p-2.5 w-fit rounded-lg bg-zinc-900/80 border border-zinc-800 text-blue-400 backdrop-blur-md">
               <FileCheck className="w-4 h-4" />
             </div>
           </div>
 
-          <div className="relative z-10 bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6">
+          {/* Bottom Text Part - Dark gradient localized here */}
+          <div className="relative z-10 bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6 mt-auto">
             <h3 className="text-sm font-semibold text-white">
               Asset & Meta Standards
             </h3>
