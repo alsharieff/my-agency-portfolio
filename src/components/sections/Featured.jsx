@@ -4,7 +4,7 @@ import { Smartphone, Layout, Zap, Code2, FileCheck } from "lucide-react";
 import featuredImg from "../../assets/featured.webp";
 
 const fallbackMobileImg =
-  "https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80";
+  "https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 // High-tech, minimalist background visual links for the bottom row
 const speedBgImg =
