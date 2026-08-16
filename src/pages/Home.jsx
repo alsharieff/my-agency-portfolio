@@ -1,6 +1,5 @@
 import Hero from "../components/sections/Hero";
 import Featured from "../components/sections/Featured";
-import Services from "../components/sections/Services";
 import FeaturedCarousel from "../components/sections/FeaturedWorkCarousel";
 import About from "../components/sections/About";
 import CTAButton from "../components/sections/CTA-Button";
