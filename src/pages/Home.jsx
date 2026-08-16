@@ -1,5 +1,5 @@
 import Hero from "../components/sections/Hero";
-import Featured from "../components/sections/featured";
+import Featured from "../components/sections/Featured";
 import Services from "../components/sections/Services";
 import Work from "../components/sections/Work";
 import Contact from "../components/sections/Contact";
