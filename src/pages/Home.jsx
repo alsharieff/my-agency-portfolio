@@ -2,7 +2,7 @@ import Hero from "../components/sections/Hero";
 import Featured from "../components/sections/Featured";
 import FeaturedCarousel from "../components/sections/FeaturedWorkCarousel";
 import About from "../components/sections/About";
-// import CTAButton from "../components/sections/CTA-Button";
+import Cta from "../components/sections/Cta";
 import Contact from "../components/sections/Contact";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <Featured />
       <FeaturedCarousel />
       <About />
-      {/* <CTAButton /> */}
+      <Cta />
       <Contact />
     </>
   );

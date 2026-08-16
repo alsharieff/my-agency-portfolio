@@ -13,7 +13,7 @@ import gsc from "../../assets/gsc.svg";
 // Add all your imported SVG variables to this list
 const iconList = [acf, ahref, chatgpt, css, frog, gsc];
 
-export default function CTAButtonSection() {
+export default function Cta() {
   return (
     <section className="relative w-full bg-[#05070c] text-white flex flex-col items-center justify-center px-4 py-16 sm:py-24 overflow-hidden font-sans">
       {/* Top curved ambient glow */}
