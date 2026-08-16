@@ -1,5 +1,5 @@
 import Hero from "../components/sections/Hero";
-import Featured from "../components/sections/Featured";
+// import Featured from "../components/sections/Featured";
 import FeaturedCarousel from "../components/sections/FeaturedWorkCarousel";
 import About from "../components/sections/About";
 import CTAButton from "../components/sections/CTA-Button";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Featured />
+      {/* <Featured /> */}
       <FeaturedCarousel />
       <About />
       <CTAButton />
