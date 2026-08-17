@@ -4,6 +4,9 @@ import ss2 from "../../assets/ss2.webp";
 import ss3 from "../../assets/ss3.webp";
 import ss4 from "../../assets/ss4.webp";
 import ss5 from "../../assets/ss5.webp";
+import ss6 from "../../assets/ss6.webp";
+import ss7 from "../../assets/ss7.webp";
+import ss8 from "../../assets/ss8.webp";
 
 // Replace these image paths with your actual site screenshots
 const showcaseItems = [
@@ -35,6 +38,24 @@ const showcaseItems = [
     id: 5,
     title: "caringaustralia",
     image: ss5,
+    serviceUrl: "/services#healthcare-web",
+  },
+  {
+    id: 6,
+    title: "caringaustralia",
+    image: ss6,
+    serviceUrl: "/services#healthcare-web",
+  },
+  {
+    id: 7,
+    title: "caringaustralia",
+    image: ss7,
+    serviceUrl: "/services#healthcare-web",
+  },
+  {
+    id: 8,
+    title: "caringaustralia",
+    image: ss8,
     serviceUrl: "/services#healthcare-web",
   },
 ];
