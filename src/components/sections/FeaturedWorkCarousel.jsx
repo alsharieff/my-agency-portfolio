@@ -77,16 +77,16 @@ export default function FeaturedWorkCarousel() {
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Selected Projects & Deliverables
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-400 max-w-md mt-1">
+          {/* <p className="text-xs sm:text-sm text-zinc-400 max-w-md mt-1">
             Hover or click any browser card to flip for technical details.
-          </p>
+          </p> */}
         </div>
 
         {/* Expanded Outer Bounds & Scroll Area */}
         <div className="w-full relative overflow-hidden group py-6">
           {/* Edge Vignette Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-48 bg-gradient-to-r from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-48 bg-gradient-to-l from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
+          <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-20 sm:w-48 bg-gradient-to-r from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
+          <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-20 sm:w-48 bg-gradient-to-l from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
 
           {/* Marquee Track with Larger Card Widths */}
           <div className="flex gap-8 sm:gap-10 w-max animate-infinite-scroll group-hover:[animation-play-state:paused] px-12">
