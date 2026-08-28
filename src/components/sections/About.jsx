@@ -17,15 +17,14 @@ export default function About() {
           </h2>
           <p className="text-zinc-400 text-center max-w-xl text-xs sm:text-base leading-relaxed font-normal transition-all duration-500 ease-in-out">
             Bridging technical execution with business growth through
-            specialized WordPress development, SEO strategies, and client
-            consulting.
+            specialized WordPress development and SEO Structure.
           </p>
         </div>
 
         {/* Grid Layout with Smooth Resize Transitions */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch transition-all duration-500 ease-in-out">
-          {/* CENTER COLUMN (PROFILE): Smooth scaling container */}
-          <div className="order-1 md:col-span-2 lg:col-span-4 lg:order-2 flex flex-col items-center justify-center relative my-2 lg:my-0 transition-all duration-500 ease-in-out">
+          {/* CENTER COLUMN (PROFILE): Hidden on md (tablet), visible on mobile & lg (desktop) */}
+          <div className="order-1 flex md:hidden lg:flex lg:col-span-4 lg:order-2 flex-col items-center justify-center relative my-2 lg:my-0 transition-all duration-500 ease-in-out">
             <div className="w-full h-96 md:h-[420px] lg:h-full lg:min-h-[500px] rounded-2xl border border-zinc-800/80 bg-zinc-950/90 overflow-hidden relative group p-2 flex flex-col justify-center items-center shadow-2xl transition-all duration-500 ease-in-out">
               {/* Inner Decorative Border Frame */}
               <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-800/60 bg-zinc-950 flex items-center justify-center transition-all duration-500 ease-in-out">
@@ -80,12 +79,11 @@ export default function About() {
                   </p>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
-                  2+ Years
+                  January 2024 - Present
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">
-                Driving organic visibility, keyword strategy, and technical
-                search engine performance metrics.
+                Bridging web development and technical SEO to build high-performance casino platforms optimized for organic search visibility, speed, and architecture.
               </p>
             </div>
 
@@ -94,19 +92,18 @@ export default function About() {
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <h4 className="text-sm font-semibold text-white">
-                    WordPress Developer
+                    Web Developer
                   </h4>
                   <p className="text-xs text-zinc-400 mt-0.5">
                     Custom Themes & Engineering
                   </p>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
-                  Present
+                  - Present
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">
-                Building custom 1:1 Figma conversions, modular DOM components,
-                and lightweight themes.
+                Building lightweight, custom WordPress themes from scratch with clean PHP hooks and structured DOM components, alongside pixel-perfect 1:1 Figma-to-Elementor conversions.
               </p>
             </div>
 
@@ -151,7 +148,7 @@ export default function About() {
                     BS in Information Technology
                   </h4>
                   <p className="text-xs text-zinc-400 mt-0.5">
-                    Higher Education Graduate
+                    ABE International Business College | AMA
                   </p>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 shrink-0">
@@ -159,8 +156,7 @@ export default function About() {
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">
-                Focused on web architecture, database management, and software
-                engineering principles.
+                Focused on web architecture, web development.
               </p>
             </div>
 

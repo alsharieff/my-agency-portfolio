@@ -1,26 +1,20 @@
-import React from "react";
-// Import the generated Originkit Globe component
-// (Adjust path if the CLI installed it under @/components/ui/globe or @/components/originkit/ui/features-02/globe)
-// Relative import pointing to src/components/ui/features-02/
-import Globe from "../originkit/ui/features-02/globe";
-import OrbitControls from "../originkit/ui/features-02/orbit-controls";
+"use client";
 
-// Fallback image URL
+import Globe from "@/components/originkit/ui/features-02/globe";
+import OrbitControls from "@/components/originkit/ui/features-02/orbit-controls";
+
 const fallbackProfile =
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80";
 
-// Safely load all assets from src/assets/ dynamically
 const assetModules = import.meta.glob("../../assets/*", {
   eager: true,
   import: "default",
-});
+}) as Record<string, string>;
 
-const getAsset = (fileName, fallback = null) => {
+const getAsset = (fileName: string, fallback: string | null = null) => {
   const path = `../../assets/${fileName}`;
   return assetModules[path] || fallback;
 };
-
-// Define assets cleanly
 const profilePic = getAsset("profile.png", fallbackProfile);
 const acfLogo = getAsset("acf.svg");
 const screamingfrog = getAsset("frog.svg");
@@ -29,19 +23,26 @@ const css = getAsset("css.svg");
 const chatgpt = getAsset("chatgpt.svg");
 const ahref = getAsset("ahref.svg");
 
-export default function Hero() {
-  // Helper to render tech logos via Simple Icons CDN
-  const TechLogo = ({ slug, color }) => (
-    <img
-      src={`https://cdn.simpleicons.org/${slug}/${color || "ffffff"}`}
-      alt={slug}
-      className="w-4 h-4 object-contain"
-      loading="lazy"
-    />
-  );
+interface TechItem {
+  name: string;
+  handle: string;
+  desc: string;
+  slug: string;
+  color: string;
+  customSvg?: string | null;
+}
 
-  // TOP ROW: Core WordPress Development & Frontend Stack
-  const row1Stack = [
+const TechLogo = ({ slug, color }: { slug: string; color?: string }) => (
+  <img
+    src={`https://cdn.simpleicons.org/${slug}/${color || "ffffff"}`}
+    alt={slug}
+    className="w-4 h-4 object-contain"
+    loading="lazy"
+  />
+);
+
+const Features02 = () => {
+  const row1Stack: TechItem[] = [
     {
       name: "WordPress",
       handle: "@cms",
@@ -109,8 +110,7 @@ export default function Hero() {
     },
   ];
 
-  // BOTTOM ROW: SEO, Version Control & AI Stack
-  const row2Stack = [
+  const row2Stack: TechItem[] = [
     {
       name: "Google Search Console",
       handle: "@gsc",
@@ -159,13 +159,11 @@ export default function Hero() {
     },
   ];
 
-  // Duplicate arrays for infinite marquee loop
   const topRow = [...row1Stack, ...row1Stack];
   const bottomRow = [...row2Stack, ...row2Stack];
 
   return (
     <section className="relative min-h-screen w-full bg-[#05070c] text-white flex flex-col items-center justify-center px-4 pt-28 pb-16 overflow-hidden font-sans">
-      {/* Globe, Name & Photo Hero Container */}
       <div className="relative mb-6 flex items-center justify-center w-full max-w-6xl min-h-[300px]">
         {/* LEFT SIDE: Name "ALSHARIEFF" */}
         <div className="hidden md:flex flex-col items-end absolute left-2 lg:left-8 top-1/2 -translate-y-1/2 text-right z-10 pointer-events-none">
@@ -180,21 +178,18 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* CENTER: Originkit Interactive 3D Globe */}
+        {/* CENTER: Originkit Globe & Controls */}
         <div className="relative flex flex-col items-center justify-center z-10">
           <div className="relative h-72 w-72 sm:h-80 sm:w-80 shrink-0 overflow-hidden flex items-center justify-center">
-            {/* Soft background glow */}
             <div className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.15),transparent_70%)]" />
 
-            {/* Orbit rings animation */}
             <OrbitControls />
 
-            {/* Interactive Canvas Globe */}
             <div className="pointer-events-auto absolute inset-0 m-auto size-64 sm:size-72 cursor-grab touch-none active:cursor-grabbing">
               <Globe
                 direction="right"
                 dots={{
-                  color: "#60a5fa",
+                  color: "#3b82f6",
                   size: 10,
                   density: 4,
                   allDots: false,
@@ -214,7 +209,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Center Pill Badge */}
           <div className="z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/90 text-xs font-medium text-zinc-300 shadow-xl backdrop-blur-md -mt-4">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>WordPress & Technical SEO Architecture</span>
@@ -235,24 +229,22 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Main Heading */}
       <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-center max-w-3xl mt-2 text-white text-glow px-2">
         WordPress Built for Speed & Search Rankings
       </h2>
 
-      {/* Subtitle */}
       <p className="mt-3 text-zinc-400 text-center max-w-xl text-sm sm:text-base leading-relaxed font-normal px-4">
         Custom, fast WordPress sites structured specifically for SEO—combining
         clean PHP hooks, optimized site hierarchy, and modern tools to boost
         rankings.
       </p>
 
-      {/* Dual Marquee Ticker Section */}
+      {/* Marquee Section */}
       <div className="relative w-full max-w-7xl mt-14 overflow-hidden py-4">
         <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-36 bg-gradient-to-r from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-36 bg-gradient-to-l from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
 
-        {/* TOP ROW: Moving Left */}
+        {/* TOP ROW */}
         <div className="flex mb-4 overflow-hidden">
           <div className="animate-marquee-left gap-4 pr-4 flex">
             {topRow.map((item, idx) => (
@@ -287,7 +279,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* BOTTOM ROW: Moving Right */}
+        {/* BOTTOM ROW */}
         <div className="flex overflow-hidden">
           <div className="animate-marquee-right gap-4 pr-4 flex">
             {bottomRow.map((item, idx) => (
@@ -324,4 +316,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default Features02;

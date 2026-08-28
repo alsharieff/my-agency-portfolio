@@ -1,0 +1,9 @@
+{
+  "$schema": "https://www.originkit.dev/schema/components.json",
+  "baseUrl": "https://mcp.originkit.dev",
+  "componentsDir": "y",
+  "alias": "y",
+  "typescript": false,
+  "stack": "nextjs",
+  "styling": "tailwind"
+}

@@ -1,19 +1,44 @@
 import React from "react";
-import acf from "../../assets/acf.svg";
+// Import your custom SVGs
+import acfLogo from "../../assets/acf.svg";
 import ahref from "../../assets/ahref.svg";
 import chatgpt from "../../assets/chatgpt.svg";
 import css from "../../assets/css.svg";
-import frog from "../../assets/frog.svg";
+import screamingfrog from "../../assets/frog.svg";
 import gsc from "../../assets/gsc.svg";
 
-// Import your other SVG assets here:
-// import redis from "../../assets/redis.svg";
-// import postgres from "../../assets/postgres.svg";
+// Combined tech stack items from both rows
+const techStack = [
+  // Row 1 Stack
+  { name: "WordPress", slug: "wordpress", color: "21759B" },
+  { name: "PHP for WP", slug: "php", color: "777BB4" },
+  { name: "ACF", customSvg: acfLogo },
+  { name: "Elementor", slug: "elementor", color: "92003B" },
+  { name: "HTML5", slug: "html5", color: "E34F26" },
+  { name: "CSS3", customSvg: css },
+  { name: "Tailwind CSS", slug: "tailwindcss", color: "06B6D4" },
+  { name: "Bootstrap", slug: "bootstrap", color: "7952B3" },
+  { name: "JavaScript", slug: "javascript", color: "F7DF1E" },
 
-// Add all your imported SVG variables to this list
-const iconList = [acf, ahref, chatgpt, css, frog, gsc];
+  // Row 2 Stack
+  { name: "Google Search Console", customSvg: gsc },
+  { name: "Screaming Frog", customSvg: screamingfrog },
+  { name: "Ahrefs", customSvg: ahref },
+  { name: "GitHub", slug: "github", color: "ffffff" },
+  { name: "ChatGPT", customSvg: chatgpt },
+  { name: "Gemini", slug: "googlegemini", color: "8E75FF" },
+];
 
 export default function Cta() {
+  // Utility function to resolve the icon source URL
+  const getIconSrc = (item) => {
+    if (item.customSvg) {
+      return item.customSvg;
+    }
+    // Simple Icons CDN format matching your slug and color setup
+    return `https://cdn.simpleicons.org/${item.slug}/${item.color || "ffffff"}`;
+  };
+
   return (
     <section className="relative w-full bg-[#05070c] text-white flex flex-col items-center justify-center px-4 py-16 sm:py-24 overflow-hidden font-sans">
       {/* Top curved ambient glow */}
@@ -21,77 +46,30 @@ export default function Cta() {
 
       {/* BACKGROUND LOOPING ICONS GRID */}
       <div className="absolute inset-0 flex flex-col justify-center gap-4 opacity-30 select-none pointer-events-none scale-105">
-        {/* Row 1 - Marquee Normal */}
-        <div className="flex w-max gap-4 animate-marquee">
-          {[...Array(6)]
-            .flatMap(() => iconList)
-            .map((iconSrc, idx) => (
-              <div
-                key={`r1-${idx}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-zinc-800/80 bg-zinc-900/40 backdrop-blur-md flex items-center justify-center shrink-0"
-              >
-                <img
-                  src={iconSrc}
-                  alt="tech icon"
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
-            ))}
-        </div>
-
-        {/* Row 2 - Marquee Reverse */}
-        <div className="flex w-max gap-4 animate-marquee-reverse">
-          {[...Array(6)]
-            .flatMap(() => iconList)
-            .map((iconSrc, idx) => (
-              <div
-                key={`r2-${idx}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-zinc-800/80 bg-zinc-900/40 backdrop-blur-md flex items-center justify-center shrink-0"
-              >
-                <img
-                  src={iconSrc}
-                  alt="tech icon"
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
-            ))}
-        </div>
-
-        {/* Row 3 - Marquee Normal */}
-        <div className="flex w-max gap-4 animate-marquee">
-          {[...Array(6)]
-            .flatMap(() => iconList)
-            .map((iconSrc, idx) => (
-              <div
-                key={`r3-${idx}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-zinc-800/80 bg-zinc-900/40 backdrop-blur-md flex items-center justify-center shrink-0"
-              >
-                <img
-                  src={iconSrc}
-                  alt="tech icon"
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
-            ))}
-        </div>
-
-        {/* Row 4 - Marquee Reverse */}
-        <div className="flex w-max gap-4 animate-marquee-reverse">
-          {[...Array(6)]
-            .flatMap(() => iconList)
-            .map((iconSrc, idx) => (
-              <div
-                key={`r4-${idx}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-zinc-800/80 bg-zinc-900/40 backdrop-blur-md flex items-center justify-center shrink-0"
-              >
-                <img
-                  src={iconSrc}
-                  alt="tech icon"
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
-            ))}
-        </div>
+        {[
+          { dir: "animate-marquee", key: "r1" },
+          { dir: "animate-marquee-reverse", key: "r2" },
+          { dir: "animate-marquee", key: "r3" },
+          { dir: "animate-marquee-reverse", key: "r4" },
+        ].map((row) => (
+          <div key={row.key} className={`flex w-max gap-4 ${row.dir}`}>
+            {[...Array(4)]
+              .flatMap(() => techStack)
+              .map((item, idx) => (
+                <div
+                  key={`${row.key}-${idx}`}
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-zinc-800/80 bg-zinc-900/40 backdrop-blur-md flex items-center justify-center shrink-0"
+                >
+                  <img
+                    src={getIconSrc(item)}
+                    alt={item.name}
+                    className="w-6 h-6 object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+          </div>
+        ))}
       </div>
 
       {/* Dark Vignette / Gradient Overlay */}
@@ -130,7 +108,7 @@ export default function Cta() {
 
         {/* Action Button */}
         <a
-          href="/"
+          href="#contact"
           className="mt-2 px-6 py-2.5 rounded-full border border-zinc-800 bg-zinc-900/90 hover:bg-zinc-800/90 hover:border-zinc-700 text-xs sm:text-sm font-medium text-zinc-200 transition-all duration-200 flex items-center gap-2 shadow-lg group"
         >
           <span>Get Started</span>
