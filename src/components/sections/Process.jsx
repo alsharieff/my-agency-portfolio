@@ -50,7 +50,7 @@ export default function Process() {
       stepLabel: "STEP - 05",
       title: "Performance & Technical SEO",
       description:
-        "Mobile-first optimizations, PageSpeed audit (90+), WebP image compression, and schema markup.",
+        "Mobile first optimizations, PageSpeed audit (90+), WebP image compression, and schema markup.",
       icon: Gauge,
       progress: "95%",
     },
@@ -64,7 +64,7 @@ export default function Process() {
     },
     {
       stepLabel: "STEP - 07",
-      title: "Post-Launch Maintenance",
+      title: "Post Launch Maintenance",
       description:
         "Ongoing uptime monitoring, security updates, regular database backups, and feature requests.",
       icon: Sparkles,
@@ -76,7 +76,6 @@ export default function Process() {
     <section className="w-full bg-[#05070c] text-white py-20 px-4 md:px-8 flex justify-center font-sans">
       <div className="w-full max-w-6xl bg-[#080b11] border border-zinc-800/80 rounded-3xl p-6 sm:p-10 md:p-14 shadow-2xl relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start relative z-10">
-          
           {/* LEFT COLUMN: Sticky Header & Video Media Box */}
           <div className="lg:col-span-6 flex flex-col justify-between lg:sticky lg:top-20 self-start">
             <div>
@@ -88,14 +87,15 @@ export default function Process() {
 
               {/* Title */}
               <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight leading-tight">
-                Our 7-Step
+                Our 7 Step
                 <br />
                 Process
               </h2>
 
               {/* Subtext */}
               <p className="text-xs md:text-sm text-zinc-400 mt-4 leading-relaxed max-w-md">
-                A thorough engineering approach—from initial architecture to QA testing, launch, and continuous post-launch optimization.
+                A thorough engineering approach from initial architecture to QA
+                testing, launch, and continuous post-launch optimization.
               </p>
 
               {/* Action Button */}
@@ -189,7 +189,6 @@ export default function Process() {
               );
             })}
           </div>
-
         </div>
       </div>
     </section>

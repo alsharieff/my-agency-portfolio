@@ -4,10 +4,10 @@ import React from "react";
 // Relative import pointing to src/components/ui/features-02/
 import Globe from "../originkit/ui/features-02/globe";
 import OrbitControls from "../originkit/ui/features-02/orbit-controls";
+import profileImg from "../../assets/profile-hero.webp";
 
 // Fallback image URL
-const fallbackProfile =
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80";
+const fallbackProfile = { profileImg };
 
 // Safely load all assets from src/assets/ dynamically
 const assetModules = import.meta.glob("../../assets/*", {
@@ -217,7 +217,14 @@ export default function Hero() {
           {/* Center Pill Badge */}
           <div className="z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/90 text-xs font-medium text-zinc-300 shadow-xl backdrop-blur-md -mt-4">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>WordPress & Technical SEO Architecture</span>
+
+            {/* Mobile view */}
+            <span className="md:hidden">Sharl Kallun Portfolio</span>
+
+            {/* Desktop view (screens 640px and wider) */}
+            <span className="hidden md:inline">
+              WordPress & Technical SEO Architecture
+            </span>
           </div>
         </div>
 
@@ -242,15 +249,15 @@ export default function Hero() {
 
       {/* Subtitle */}
       <p className="mt-3 text-zinc-400 text-center max-w-xl text-sm sm:text-base leading-relaxed font-normal px-4">
-        Custom, fast WordPress sites structured specifically for SEO—combining
+        Custom, fast WordPress sites structured specifically for SEO combining
         clean PHP hooks, optimized site hierarchy, and modern tools to boost
         rankings.
       </p>
 
       {/* Dual Marquee Ticker Section */}
       <div className="relative w-full max-w-7xl mt-14 overflow-hidden py-4">
-        <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-36 bg-gradient-to-r from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-36 bg-gradient-to-l from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
+        <div className="hidden sm:block absolute top-0 bottom-0 left-0 w-36 bg-gradient-to-r from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
+        <div className="hidden sm:block absolute top-0 bottom-0 right-0 w-36 bg-gradient-to-l from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
 
         {/* TOP ROW: Moving Left */}
         <div className="flex mb-4 overflow-hidden">

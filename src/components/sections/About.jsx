@@ -83,7 +83,9 @@ export default function About() {
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">
-                Bridging web development and technical SEO to build high-performance casino platforms optimized for organic search visibility, speed, and architecture.
+                Bridging web development and technical SEO to build high
+                performance casino platforms optimized for organic search
+                visibility, speed, and architecture.
               </p>
             </div>
 
@@ -103,7 +105,9 @@ export default function About() {
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">
-                Building lightweight, custom WordPress themes from scratch with clean PHP hooks and structured DOM components, alongside pixel-perfect 1:1 Figma-to-Elementor conversions.
+                Building lightweight, custom WordPress themes from scratch with
+                clean PHP hooks and structured DOM components, alongside
+                pixel-perfect 1:1 Figma-to-Elementor conversions.
               </p>
             </div>
 
@@ -123,7 +127,7 @@ export default function About() {
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">
-                Managing high-value client investments, market evaluations, and
+                Managing high value client investments, market evaluations, and
                 tactical negotiation pipelines.
               </p>
             </div>
