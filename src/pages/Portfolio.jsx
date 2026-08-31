@@ -84,16 +84,17 @@ export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(showcaseItems[0]);
 
   return (
-    <main className="w-full min-h-screen bg-[#05070c] text-white pt-28 pb-24 px-4 sm:px-6 relative overflow-hidden font-sans">
+    <main className="w-full min-h-screen bg-[#05070c] text-white pt-40 pb-24 px-4 sm:px-6 relative overflow-hidden font-sans">
       {/* Background Ambient Glow */}
       <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-blue-600/10 blur-[180px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Simplified Header */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-6">
           <h1 className="text-[11px] font-mono tracking-[0.25em] text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-4">
             Selected Work Showcase
           </h1>
+        </div>
 
         {/* SECTION 1: Spotlight Display (Static Non-Scrollable Mockup) */}
         <div className="bg-[#080b11] border border-zinc-800 rounded-3xl p-6 sm:p-12 mb-24 grid lg:grid-cols-12 gap-8 items-center shadow-2xl">
