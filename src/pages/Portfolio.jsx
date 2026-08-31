@@ -91,13 +91,9 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Simplified Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[11px] font-mono tracking-[0.25em] text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-4">
+          <h1 className="text-[11px] font-mono tracking-[0.25em] text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-4">
             Selected Work Showcase
-          </span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
-            Custom Web Architectures & SEO Platforms
           </h1>
-        </div>
 
         {/* SECTION 1: Spotlight Display (Static Non-Scrollable Mockup) */}
         <div className="bg-[#080b11] border border-zinc-800 rounded-3xl p-6 sm:p-12 mb-24 grid lg:grid-cols-12 gap-8 items-center shadow-2xl">
