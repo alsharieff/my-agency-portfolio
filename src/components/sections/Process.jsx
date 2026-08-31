@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import stepprocess from "../../assets/stepprocess.webp";
+import videoprocess from "../../assets/videoprocess.mp4";
 
 export default function Process() {
   const steps = [
@@ -107,25 +108,18 @@ export default function Process() {
 
             {/* Video / Photo Preview Card */}
             <div className="mt-10 relative rounded-2xl overflow-hidden">
-              <img
-                src={stepprocess}
-                alt="Process Showcase"
-                className="w-full h-60 md:h-64 object-cover contrast-105 opacity-90 group-hover:scale-105 transition-transform duration-500"
+              <video
+                src={videoprocess}
+                poster={stepprocess}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-60 md:h-64 object-cover contrast-105 opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
-                {/* <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white cursor-pointer hover:bg-blue-600 hover:border-blue-500 transition-colors">
-                    <Play className="w-4 h-4 fill-current ml-0.5" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white leading-none">
-                      Play Information
-                    </h4>
-                    <span className="text-xs text-zinc-400 mt-1 block">
-                      4 min 30 sec
-                    </span>
-                  </div>
-                </div> */}
+
+              <div className="absolute inset-0 flex items-end p-6 pointer-events-none">
+                <div className="flex items-center gap-3 pointer-events-auto"></div>
               </div>
             </div>
           </div>
