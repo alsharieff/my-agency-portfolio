@@ -172,9 +172,9 @@ export default function Hero() {
           <span className="text-xs uppercase tracking-[0.3em] text-blue-400 font-semibold mb-1">
             Portfolio
           </span>
-          <h1 className="text-3xl lg:text-5xl font-black tracking-wider text-white uppercase text-glow">
+          {/* <h1 className="text-3xl lg:text-5xl font-black tracking-wider text-white uppercase text-glow">
             ALSHARIEFF
-          </h1>
+          </h1> */}
           <span className="text-xs text-zinc-500 font-mono tracking-widest mt-1">
             DEVELOPER & SEO SPECIALIST
           </span>
@@ -190,7 +190,8 @@ export default function Hero() {
             <OrbitControls />
 
             {/* Interactive Canvas Globe */}
-            <div className="pointer-events-auto absolute inset-0 m-auto size-64 sm:size-72 cursor-grab touch-none active:cursor-grabbing">
+            {/* Interactive Canvas Globe */}
+            <div className="pointer-events-auto absolute inset-0 m-auto size-64 sm:size-72 cursor-grab active:cursor-grabbing">
               <Globe
                 direction="right"
                 dots={{
@@ -202,7 +203,7 @@ export default function Hero() {
                 speed={1}
                 smoothing={0}
                 stopOnHover={false}
-                interactive
+                interactive={true}
                 dragSpeed={5}
                 showOutline={false}
                 showGrid={false}
@@ -243,7 +244,7 @@ export default function Hero() {
       </div>
 
       {/* Main Heading */}
-      <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-center max-w-3xl mt-2 text-white text-glow px-2">
+      <h2 className="uppercase text-3xl sm:text-5xl font-extrabold tracking-tight text-center max-w-3xl mt-2 text-white text-glow px-2">
         WordPress Built for Speed & Search Rankings
       </h2>
 

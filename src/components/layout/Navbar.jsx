@@ -91,7 +91,7 @@ const Navbar = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 border border-transparent transition-all"
+                className="p-2 rounded-full bg-white/5 text-gray-400 border border-transparent transition-all"
               >
                 <FaFacebookF size={14} />
               </a>
@@ -99,7 +99,7 @@ const Navbar = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 border border-transparent transition-all"
+                className="p-2 rounded-full bg-white/5 text-gray-400 border border-transparent transition-all"
               >
                 <FaLinkedinIn size={14} />
               </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 href="https://t.me"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 border border-transparent transition-all"
+                className="p-2 rounded-full bg-white/5 text-gray-400 border border-transparent transition-all"
               >
                 <FaTelegramPlane size={14} />
               </a>
@@ -218,7 +218,7 @@ const Navbar = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              className="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 border border-transparent transition-all"
+              className="p-2.5 rounded-full bg-white/5 border border-transparent transition-all"
             >
               <FaFacebookF size={16} />
             </a>
@@ -226,7 +226,7 @@ const Navbar = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 border border-transparent transition-all"
+              className="p-2.5 rounded-full bg-white/5 border border-transparent transition-all"
             >
               <FaLinkedinIn size={16} />
             </a>
@@ -234,7 +234,7 @@ const Navbar = () => {
               href="https://t.me"
               target="_blank"
               rel="noreferrer"
-              className="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 border border-transparent transition-all"
+              className="p-2.5 rounded-full bg-white/5 border border-transparent transition-all"
             >
               <FaTelegramPlane size={16} />
             </a>

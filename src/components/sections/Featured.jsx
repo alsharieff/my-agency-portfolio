@@ -94,8 +94,9 @@ export default function Featured() {
           />
           <div className="relative z-10 flex items-baseline justify-between bg-gradient-to-t from-[#080b11] via-[#080b11]/80 to-transparent -mx-6 -mb-6 p-6 pt-6 mt-auto">
             <div>
-              <span className="text-3xl font-extrabold text-emerald-400 tracking-tight">
-                {speedTab === "mobile" ? "94" : "100"}
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase text-emerald-400 tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                {speedTab === "mobile" ? "Green Zone" : "Green Zone"}
               </span>
               <span className="text-xs font-mono text-zinc-500 ml-1">/100</span>
             </div>

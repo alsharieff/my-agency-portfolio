@@ -50,7 +50,8 @@ export default function Globe({
       offCtx.drawImage(img, 0, 0, sampleWidth, sampleHeight);
 
       const imgData = offCtx.getImageData(0, 0, sampleWidth, sampleHeight).data;
-      const continentDots: { x: number; y: number; z: number; size: number }[] = [];
+      const continentDots: { x: number; y: number; z: number; size: number }[] =
+        [];
 
       // 2. Convert map pixels into 3D sphere points
       const step = Math.max(1, Math.floor(6 - (dots.density || 4) / 2));
