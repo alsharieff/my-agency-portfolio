@@ -4,9 +4,6 @@ import ss2 from "../../assets/ss2.webp";
 import ss3 from "../../assets/ss3.webp";
 import ss4 from "../../assets/ss4.webp";
 import ss5 from "../../assets/ss5.webp";
-import ss6 from "../../assets/ss6.webp";
-import ss7 from "../../assets/ss7.webp";
-import ss8 from "../../assets/ss8.webp";
 
 const showcaseItems = [
   {
@@ -56,18 +53,22 @@ const showcaseItems = [
   },
 ];
 
-// Duplicate for seamless continuous ticker loop
 const tickerList = [...showcaseItems, ...showcaseItems];
 
 export default function FeaturedWorkCarousel() {
   const [flippedId, setFlippedId] = useState(null);
+
+  // Toggle flip on click/tap
+  const handleCardClick = (uniqueKey) => {
+    setFlippedId((prev) => (prev === uniqueKey ? null : uniqueKey));
+  };
 
   return (
     <section className="relative w-full bg-[#05070c] text-white flex flex-col items-center justify-center py-24 px-2 sm:px-6 overflow-hidden font-sans">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[450px] bg-blue-600/10 blur-[160px] pointer-events-none rounded-full" />
 
-      {/* Main Container - Expanded from max-w-6xl to max-w-[1400px] */}
+      {/* Main Container */}
       <div className="w-full max-w-[1400px] flex flex-col items-center justify-center relative z-10">
         {/* Header */}
         <div className="flex flex-col items-center gap-2 mb-12 text-center">
@@ -77,18 +78,15 @@ export default function FeaturedWorkCarousel() {
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Selected Projects & Deliverables
           </h2>
-          {/* <p className="text-xs sm:text-sm text-zinc-400 max-w-md mt-1">
-            Hover or click any browser card to flip for technical details.
-          </p> */}
         </div>
 
-        {/* Expanded Outer Bounds & Scroll Area */}
+        {/* Outer Bounds & Scroll Area */}
         <div className="w-full relative overflow-hidden group py-6">
           {/* Edge Vignette Overlays */}
           <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-20 sm:w-48 bg-gradient-to-r from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
           <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-20 sm:w-48 bg-gradient-to-l from-[#05070c] via-[#05070c]/80 to-transparent z-20 pointer-events-none" />
 
-          {/* Marquee Track with Larger Card Widths */}
+          {/* Marquee Track */}
           <div className="flex gap-8 sm:gap-10 w-max animate-infinite-scroll group-hover:[animation-play-state:paused] px-12">
             {tickerList.map((item, index) => {
               const uniqueKey = `${item.id}-${index}`;
@@ -97,10 +95,10 @@ export default function FeaturedWorkCarousel() {
               return (
                 <div
                   key={uniqueKey}
+                  onClick={() => handleCardClick(uniqueKey)}
                   onMouseEnter={() => setFlippedId(uniqueKey)}
                   onMouseLeave={() => setFlippedId(null)}
-                  /* Card width increased to 380px on desktop */
-                  className="w-[320px] sm:w-[380px] h-[500px] sm:h-[580px] [perspective:1000px] shrink-0 cursor-pointer"
+                  className="w-[320px] sm:w-[380px] h-[500px] sm:h-[580px] [perspective:1000px] shrink-0 cursor-pointer select-none"
                 >
                   {/* 3D Flip Inner Container */}
                   <div
@@ -108,7 +106,7 @@ export default function FeaturedWorkCarousel() {
                       isFlipped ? "[transform:rotateY(180deg)]" : ""
                     }`}
                   >
-                    {/* FRONT SIDE (Browser Mockup Preview) */}
+                    {/* FRONT SIDE */}
                     <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-2xl border border-zinc-800/80 bg-[#080b11] p-3.5 flex flex-col shadow-2xl">
                       {/* Top Bar */}
                       <div className="h-9 bg-zinc-900/80 border-b border-zinc-800/80 px-3.5 flex items-center justify-between shrink-0 rounded-t-xl">
@@ -140,13 +138,13 @@ export default function FeaturedWorkCarousel() {
                             </h3>
                           </div>
                           <span className="text-[10px] font-mono text-zinc-400 bg-zinc-900/90 border border-zinc-700/60 px-2.5 py-1 rounded">
-                            Hover to Flip ↺
+                            Tap / Hover to Flip ↺
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    {/* BACK SIDE (Detailed Specs & Action) */}
+                    {/* BACK SIDE */}
                     <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl border border-blue-500/40 bg-[#0b0f19] p-7 flex flex-col justify-between shadow-2xl shadow-blue-500/10">
                       <div>
                         <div className="flex items-center justify-between pb-3 border-b border-zinc-800">
@@ -183,6 +181,7 @@ export default function FeaturedWorkCarousel() {
 
                       <a
                         href={item.serviceUrl}
+                        onClick={(e) => e.stopPropagation()} // Prevents flipping back when clicking the action button
                         className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-blue-600/20"
                       >
                         <span>View Full Case Study</span>

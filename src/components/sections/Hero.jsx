@@ -219,13 +219,8 @@ export default function Hero() {
           <div className="z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/90 text-xs font-medium text-zinc-300 shadow-xl backdrop-blur-md -mt-4">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
 
-            {/* Mobile view */}
-            <span className="md:hidden">Sharl Kallun Portfolio</span>
-
             {/* Desktop view (screens 640px and wider) */}
-            <span className="hidden md:inline">
-              WordPress & Technical SEO Architecture
-            </span>
+            <span className="">ALSHARIEFF | PORTFOLIO</span>
           </div>
         </div>
 
