@@ -168,17 +168,17 @@ export default function Hero() {
       {/* Globe, Name & Photo Hero Container */}
       <div className="relative mb-6 flex items-center justify-center w-full max-w-6xl min-h-[300px]">
         {/* LEFT SIDE: Name "ALSHARIEFF" */}
-        <div className="hidden md:flex flex-col items-end absolute left-2 lg:left-8 top-1/2 -translate-y-1/2 text-right z-10 pointer-events-none">
+        {/* <div className="hidden md:flex flex-col items-end absolute left-2 lg:left-8 top-1/2 -translate-y-1/2 text-right z-10 pointer-events-none">
           <span className="text-xs uppercase tracking-[0.3em] text-blue-400 font-semibold mb-1">
             Portfolio
           </span>
-          {/* <h1 className="text-3xl lg:text-5xl font-black tracking-wider text-white uppercase text-glow">
+          <h1 className="text-3xl lg:text-5xl font-black tracking-wider text-white uppercase text-glow">
             ALSHARIEFF
-          </h1> */}
+          </h1>
           <span className="text-xs text-zinc-500 font-mono tracking-widest mt-1">
             DEVELOPER & SEO SPECIALIST
           </span>
-        </div>
+        </div> */}
 
         {/* CENTER: Originkit Interactive 3D Globe */}
         <div className="relative flex flex-col items-center justify-center z-10">
@@ -225,7 +225,7 @@ export default function Hero() {
         </div>
 
         {/* RIGHT SIDE: Portrait Photo */}
-        <div className="hidden md:block absolute -right-4 lg:right-6 top-1/2 -translate-y-1/2 w-44 lg:w-56 pointer-events-none z-10">
+        {/* <div className="hidden md:block absolute -right-4 lg:right-6 top-1/2 -translate-y-1/2 w-44 lg:w-56 pointer-events-none z-10">
           <div className="relative w-full h-full">
             {profilePic && (
               <img
@@ -235,7 +235,7 @@ export default function Hero() {
               />
             )}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Main Heading */}
