@@ -93,7 +93,7 @@ export default function Featured() {
       {/* Main Container */}
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-stretch relative z-10">
         {/* ================= LEFT COLUMN: PROFILE HERO ================= */}
-        <div className="md:col-span-5 relative overflow-hidden rounded-3xl bg-black shadow-2xl h-[320px] sm:h-[400px] md:h-auto min-h-[320px] md:min-h-[640px] flex">
+        <div className="md:col-span-5 relative overflow-hidden rounded-3xl bg-black shadow-2xl h-[420px] sm:h-[480px] md:h-auto min-h-[420px] md:min-h-[640px] flex">
           <img
             src={profileImg}
             alt="Profile Hero"
@@ -104,18 +104,13 @@ export default function Featured() {
         {/* ================= RIGHT COLUMN: HEADER + CARDS ================= */}
         <div className="md:col-span-7 flex flex-col justify-between gap-6 md:gap-8">
           {/* TOP ROW: HEADING & TEXT */}
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-3">
             <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 bg-indigo-950/40 border border-indigo-800/40 px-3.5 py-1 rounded-full backdrop-blur-md">
               Featured Expertise
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
               Built with Precision & High Performance
             </h2>
-            <p className="text-sm md:text-base text-zinc-400 max-w-xl leading-relaxed mt-1">
-              Specialized web engineering techniques designed for ultra-fast
-              performance, perfect mobile responsiveness, and scalable
-              architectures.
-            </p>
           </div>
 
           {/* BOTTOM ROW: STACKED OVERLAP ON MOBILE / MARQUEE ON DESKTOP */}
@@ -125,7 +120,7 @@ export default function Featured() {
             <div className="hidden md:block absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#030408] to-transparent z-20 pointer-events-none" />
 
             {/* MOBILE LAYOUT: Sticky Overlapping Stack */}
-            <div className="flex flex-col gap-4 md:hidden pb-12">
+            <div className="flex flex-col gap-6 md:hidden pb-12">
               {featuredItems.map((item, idx) => (
                 <Card
                   key={`mobile-card-${item.id}`}
@@ -189,10 +184,9 @@ export default function Featured() {
   );
 }
 
-// Card Component with Scoped Mobile Sticky Overlap Effect
+// Card Component with Centered Text on Mobile & No Hover Transforms
 function Card({ item, index, isMobile }) {
-  // Mobile sticky top offset (starts sticking closer to top on mobile screens)
-  const mobileTopOffset = 24 + index * 20;
+  const mobileTopOffset = 20 + index * 24;
   const mobileZIndex = 10 + index;
 
   return (
@@ -208,8 +202,9 @@ function Card({ item, index, isMobile }) {
       className={`
         ${isMobile ? "sticky" : "relative"}
         overflow-hidden rounded-2xl bg-black p-4 sm:p-5 
-        shadow-2xl flex flex-col justify-between min-h-[240px] sm:min-h-[260px] md:min-h-[290px] 
-        group transition-all duration-300 backdrop-blur-md
+        shadow-2xl flex flex-col justify-between 
+        min-h-[310px] sm:min-h-[340px] md:min-h-[290px] 
+        backdrop-blur-md border border-white/10
       `}
     >
       <div
@@ -217,19 +212,19 @@ function Card({ item, index, isMobile }) {
       />
 
       {/* Image Container */}
-      <div className="relative z-10 flex items-center justify-center h-28 sm:h-36 md:h-44 w-full mb-3 overflow-hidden rounded-xl bg-black/80 p-2">
+      <div className="relative z-10 flex items-center justify-center h-44 sm:h-48 md:h-44 w-full mb-3 overflow-hidden rounded-xl bg-zinc-950/80 p-1">
         <img
           src={item.image}
           alt={item.title}
-          className="h-full w-full object-contain object-center transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-full object-contain object-center"
         />
       </div>
 
-      <div className="relative z-10">
-        <h3 className="text-sm sm:text-base font-semibold text-white tracking-wide">
+      <div className="relative z-10 text-center md:text-left">
+        <h3 className="text-base font-semibold text-white tracking-wide">
           {item.title}
         </h3>
-        <p className="text-xs text-zinc-400 mt-1 leading-relaxed line-clamp-2">
+        <p className="text-xs text-zinc-400 mt-1.5 leading-relaxed line-clamp-2">
           {item.description}
         </p>
       </div>
