@@ -88,7 +88,7 @@ const Navbar = () => {
             {/* Social Icons */}
             <div className="hidden sm:flex items-center gap-3 border-r border-white/10 pr-5">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/19dGSBWJzQ/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-full bg-white/5 text-gray-400 border border-transparent transition-all"
@@ -96,7 +96,7 @@ const Navbar = () => {
                 <FaFacebookF size={14} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/al-sharieff-kallun-09b829142?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-full bg-white/5 text-gray-400 border border-transparent transition-all"
@@ -104,7 +104,7 @@ const Navbar = () => {
                 <FaLinkedinIn size={14} />
               </a>
               <a
-                href="https://t.me"
+                href="https://t.me/sharl07"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-full bg-white/5 text-gray-400 border border-transparent transition-all"
@@ -215,7 +215,7 @@ const Navbar = () => {
           {/* Social Icons for Mobile */}
           <div className="flex items-center justify-around pt-2 text-gray-400">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/19dGSBWJzQ/?mibextid=wwXIfr"
               target="_blank"
               rel="noreferrer"
               className="p-2.5 rounded-full bg-white/5 border border-transparent transition-all"
@@ -223,7 +223,7 @@ const Navbar = () => {
               <FaFacebookF size={16} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/al-sharieff-kallun-09b829142?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
               target="_blank"
               rel="noreferrer"
               className="p-2.5 rounded-full bg-white/5 border border-transparent transition-all"
@@ -231,7 +231,7 @@ const Navbar = () => {
               <FaLinkedinIn size={16} />
             </a>
             <a
-              href="https://t.me"
+              href="https://t.me/sharl07"
               target="_blank"
               rel="noreferrer"
               className="p-2.5 rounded-full bg-white/5 border border-transparent transition-all"

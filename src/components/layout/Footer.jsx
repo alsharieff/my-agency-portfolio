@@ -7,13 +7,22 @@ export default function Footer() {
           © {new Date().getFullYear()} {agencyData.name}. All rights reserved.
         </span>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-slate-300 transition">
+          <a
+            href="https://www.facebook.com/share/19dGSBWJzQ/?mibextid=wwXIfr"
+            className="hover:text-slate-300 transition"
+          >
             Facebook
           </a>
-          <a href="#" className="hover:text-slate-300 transition">
+          <a
+            href="https://www.linkedin.com/in/al-sharieff-kallun-09b829142?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+            className="hover:text-slate-300 transition"
+          >
             LinkedIn
           </a>
-          <a href="#" className="hover:text-slate-300 transition">
+          <a
+            href="https://t.me/sharl07"
+            className="hover:text-slate-300 transition"
+          >
             Telegram
           </a>
         </div>
