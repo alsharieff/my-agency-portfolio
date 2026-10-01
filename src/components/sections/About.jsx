@@ -75,7 +75,7 @@ export default function About() {
                     SEO Specialist
                   </h4>
                   <p className="text-xs text-zinc-400 mt-0.5">
-                    Digital Growth & Optimization
+                    Forgetech Digital
                   </p>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
@@ -101,7 +101,7 @@ export default function About() {
                   </p>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
-                  - Present
+                  May 2026 - October 2026
                 </span>
               </div>
               <p className="text-xs text-zinc-400 mt-2.5 leading-relaxed">

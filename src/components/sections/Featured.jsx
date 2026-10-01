@@ -1,233 +1,100 @@
 import React from "react";
 
-// Asset Imports
+// Your Original Asset Import
 import profileImg from "../../assets/profile.png";
-import figmaToWordpress from "../../assets/figma-to-wordpress.webp";
-import mobileResponsive from "../../assets/mobile-responsive.webp";
-import customThemeBuilds from "../../assets/custom-theme-builds.webp";
-import buildingPlugins from "../../assets/building-plugins.webp";
-import seoMetaOptimizations from "../../assets/seo-meta-optimizations.webp";
-import pagespeedScores from "../../assets/pagespeed-score.webp";
 
-const featuredItems = [
-  {
-    id: 1,
-    title: "Figma to WordPress",
-    description:
-      "Pixel-perfect conversion of complex design files into custom WordPress sites.",
-    image: figmaToWordpress,
-    glow: "bg-purple-600/15",
-  },
-  {
-    id: 2,
-    title: "Mobile Responsive",
-    description:
-      "Ensuring optimal layout, touch-interactivity, and flawless performance on all devices.",
-    image: mobileResponsive,
-    glow: "bg-blue-600/15",
-  },
-  {
-    id: 3,
-    title: "Custom Theme Build",
-    description:
-      "Engineered from scratch using optimal PHP, ACF, and modern styling frameworks.",
-    image: customThemeBuilds,
-    glow: "bg-indigo-600/15",
-  },
-  {
-    id: 4,
-    title: "Building Plugins",
-    description:
-      "Tailored plugin development to add unique, secure, and lightweight functionalities.",
-    image: buildingPlugins,
-    glow: "bg-cyan-600/15",
-  },
-  {
-    id: 5,
-    title: "SEO & Meta Optimization",
-    description:
-      "Built-in SEO structure, schema markup, and optimal metadata for higher search visibility.",
-    image: seoMetaOptimizations,
-    glow: "bg-violet-600/15",
-  },
-  {
-    id: 6,
-    title: "90%+ PageSpeed Score",
-    description:
-      "Lightweight codebase, optimized assets, and caching for blazing-fast load times.",
-    image: pagespeedScores,
-    glow: "bg-emerald-600/15",
-  },
+// Your Expertise Items mapped into clean service tags
+const serviceTags = [
+  "Figma to WordPress",
+  "Mobile Responsive",
+  "Custom Theme Build",
+  "Building Plugins",
+  "SEO & Meta Optimization",
+  "90%+ PageSpeed Score",
 ];
 
-const col1Items = [featuredItems[0], featuredItems[1], featuredItems[2]];
-const col2Items = [featuredItems[3], featuredItems[4], featuredItems[5]];
-
-export default function Featured() {
+export default function FeaturedInvertedCurveLayout() {
   return (
-    <section className="w-full bg-[#030408] text-white py-12 md:py-16 px-4 md:px-8 flex justify-center font-sans relative md:overflow-hidden">
-      {/* Keyframes for Continuous Marquee Animation (Tablet & Desktop only) */}
-      <style>{`
-        @keyframes marqueeDown {
-          0% { transform: translateY(-50%); }
-          100% { transform: translateY(0%); }
-        }
-        @keyframes marqueeUp {
-          0% { transform: translateY(0%); }
-          100% { transform: translateY(-50%); }
-        }
-        @media (min-width: 768px) {
-          .animate-marquee-down {
-            animation: marqueeDown 24s linear infinite;
-          }
-          .animate-marquee-up {
-            animation: marqueeUp 24s linear infinite;
-          }
-        }
-      `}</style>
+    <section className="relative w-full bg-[#030408] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
+      {/* Ambient Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[900px] h-[300px] sm:h-[450px] bg-indigo-600/10 blur-[120px] sm:blur-[160px] pointer-events-none rounded-full" />
 
-      {/* Ambient Glow Effects */}
-      <div className="absolute top-1/4 left-10 w-[300px] md:w-[500px] h-[300px] bg-indigo-600/10 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-10 w-[300px] md:w-[500px] h-[300px] bg-purple-600/10 blur-[140px] pointer-events-none rounded-full" />
-
-      {/* Main Container */}
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-stretch relative z-10">
-        {/* ================= LEFT COLUMN: PROFILE HERO ================= */}
-        <div className="md:col-span-5 relative overflow-hidden rounded-3xl bg-black shadow-2xl h-[420px] sm:h-[480px] md:h-auto min-h-[420px] md:min-h-[640px] flex">
-          <img
-            src={profileImg}
-            alt="Profile Hero"
-            className="w-full h-full object-cover object-center rounded-3xl"
-          />
+      <div className="max-w-6xl mx-auto flex flex-col items-center relative z-10">
+        {/* Header Section */}
+        <div className="text-center max-w-2xl mb-12 sm:mb-20">
+          {/* <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-indigo-400 bg-indigo-950/40 border border-indigo-800/40 px-3.5 py-1 rounded-full backdrop-blur-md">
+            Featured Expertise
+          </span> */}
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mt-4 mb-3 sm:mb-4 uppercase">
+            Built with Precision & High Performance
+          </h2>
+          <p className="text-zinc-400 text-xs sm:text-sm md:text-base leading-relaxed">
+            Delivering clean architecture, blazing-fast speeds, and flawless
+            user experiences from design to production.
+          </p>
         </div>
 
-        {/* ================= RIGHT COLUMN: HEADER + CARDS ================= */}
-        <div className="md:col-span-7 flex flex-col justify-between gap-6 md:gap-8">
-          {/* TOP ROW: HEADING & TEXT */}
-          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 bg-indigo-950/40 border border-indigo-800/40 px-3.5 py-1 rounded-full backdrop-blur-md">
-              Featured Expertise
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Built with Precision & High Performance
-            </h2>
+        {/* Central Image Container & Responsive Overlapping Floating Cards */}
+        <div className="relative w-full max-w-5xl mx-auto my-4 sm:my-8">
+          {/* Main Image Container: Utilizes custom border radii to create the organic indented corner curves */}
+          <div className="w-full h-[320px] sm:h-[420px] lg:h-[480px] bg-zinc-900 relative shadow-2xl overflow-hidden rounded-[2.5rem] sm:rounded-[3rem] border border-white/10 z-0">
+            <img
+              src={profileImg}
+              alt="Profile Hero"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
 
-          {/* BOTTOM ROW: STACKED OVERLAP ON MOBILE / MARQUEE ON DESKTOP */}
-          <div className="marquee-container relative w-full h-auto md:h-[520px] md:overflow-hidden rounded-3xl border border-white/10 bg-black/60 backdrop-blur-md p-3 sm:p-4">
-            {/* Smooth Edge Fades (Tablet & Desktop Only) */}
-            <div className="hidden md:block absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#030408] to-transparent z-20 pointer-events-none" />
-            <div className="hidden md:block absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#030408] to-transparent z-20 pointer-events-none" />
+          {/* FLOATING CARD 1: Top Left (Dark Card) - Positioned over the top-left custom corner curve */}
+          <div className="relative sm:absolute -top-6 sm:top-6 left-0 sm:left-[-1.5rem] mb-3 sm:mb-0 bg-[#0b0f19] text-white p-4 sm:p-5 rounded-2xl sm:rounded-3xl shadow-2xl w-full sm:w-72 z-20 flex flex-col gap-1 border border-white/10 backdrop-blur-md">
+            <span className="text-2xl sm:text-3xl font-black tracking-tight text-white">
+              90%+
+            </span>
+            <p className="text-[11px] sm:text-xs text-zinc-400 leading-snug">
+              Optimized codebase for top-tier PageSpeed scores.
+            </p>
+          </div>
 
-            {/* MOBILE LAYOUT: Sticky Overlapping Stack */}
-            <div className="flex flex-col gap-6 md:hidden pb-12">
-              {featuredItems.map((item, idx) => (
-                <Card
-                  key={`mobile-card-${item.id}`}
-                  item={item}
-                  index={idx}
-                  isMobile={true}
-                />
-              ))}
+          {/* FLOATING CARD 2: Top Right (White Card) */}
+          <div className="relative sm:absolute top-2 sm:top-6 right-0 sm:right-[-1rem] mb-3 sm:mb-0 bg-white text-zinc-900 px-4 py-3 sm:px-5 sm:py-4 rounded-2xl sm:rounded-3xl shadow-2xl flex items-center gap-3 w-full sm:w-56 z-20 border border-zinc-100">
+            <div className="flex flex-col">
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-zinc-900">
+                SEO
+              </span>
+              <span className="text-[10px] text-zinc-500">
+                Schema & Metadata Ready
+              </span>
             </div>
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-zinc-900 flex items-center justify-center text-white text-xs font-bold ml-auto">
+              ★
+            </div>
+          </div>
 
-            {/* DESKTOP LAYOUT: Dual Column Animated Marquee */}
-            <div className="hidden md:grid grid-cols-2 gap-4 h-full">
-              {/* COLUMN 1 */}
-              <div className="relative overflow-hidden h-full">
-                <div className="flex flex-col gap-4 animate-marquee-down">
-                  {col1Items.map((item, idx) => (
-                    <Card
-                      key={`col1-orig-${idx}`}
-                      item={item}
-                      index={idx}
-                      isMobile={false}
-                    />
-                  ))}
-                  {col1Items.map((item, idx) => (
-                    <Card
-                      key={`col1-dup-${idx}`}
-                      item={item}
-                      index={idx}
-                      isMobile={false}
-                    />
-                  ))}
-                </div>
-              </div>
+          {/* FLOATING CARD 3: Bottom Left (White Card) */}
+          <div className="relative sm:absolute bottom-auto sm:bottom-8 left-0 sm:left-[-2rem] my-3 sm:my-0 bg-white text-zinc-900 p-4 sm:p-5 rounded-2xl sm:rounded-3xl shadow-2xl w-full sm:w-64 z-20 flex flex-col gap-1 border border-zinc-100">
+            <span className="text-lg sm:text-xl font-black tracking-tight text-zinc-900">
+              Figma to WordPress
+            </span>
+            <p className="text-[11px] sm:text-xs text-zinc-500 leading-snug">
+              Pixel-perfect conversion of complex design files.
+            </p>
+          </div>
 
-              {/* COLUMN 2 */}
-              <div className="relative overflow-hidden h-full">
-                <div className="flex flex-col gap-4 animate-marquee-up">
-                  {col2Items.map((item, idx) => (
-                    <Card
-                      key={`col2-orig-${idx}`}
-                      item={item}
-                      index={idx + 3}
-                      isMobile={false}
-                    />
-                  ))}
-                  {col2Items.map((item, idx) => (
-                    <Card
-                      key={`col2-dup-${idx}`}
-                      item={item}
-                      index={idx + 3}
-                      isMobile={false}
-                    />
-                  ))}
-                </div>
-              </div>
+          {/* FLOATING CARD 4: Bottom Right (Service Tags Capsule Box) - Positioned over the bottom-right indented curve */}
+          <div className="relative sm:absolute bottom-auto sm:bottom-6 right-0 sm:right-[-1.5rem] mt-3 sm:mt-0 bg-[#0b0f19]/95 backdrop-blur-md border border-white/10 p-4 sm:p-5 rounded-2xl sm:rounded-3xl shadow-2xl w-full sm:max-w-md z-20">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-start sm:justify-end">
+              {serviceTags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="text-[10px] sm:text-[11px] font-medium bg-zinc-900 border border-white/10 text-zinc-300 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full shadow-inner"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-// Card Component with Centered Text on Mobile & No Hover Transforms
-function Card({ item, index, isMobile }) {
-  const mobileTopOffset = 20 + index * 24;
-  const mobileZIndex = 10 + index;
-
-  return (
-    <div
-      style={
-        isMobile
-          ? {
-              top: `${mobileTopOffset}px`,
-              zIndex: mobileZIndex,
-            }
-          : {}
-      }
-      className={`
-        ${isMobile ? "sticky" : "relative"}
-        overflow-hidden rounded-2xl bg-black p-4 sm:p-5 
-        shadow-2xl flex flex-col justify-between 
-        min-h-[310px] sm:min-h-[340px] md:min-h-[290px] 
-        backdrop-blur-md border border-white/10
-      `}
-    >
-      <div
-        className={`absolute top-2 right-2 w-32 h-32 sm:w-36 sm:h-36 ${item.glow} rounded-full blur-2xl pointer-events-none`}
-      />
-
-      {/* Image Container */}
-      <div className="relative z-10 flex items-center justify-center h-44 sm:h-48 md:h-44 w-full mb-3 overflow-hidden rounded-xl bg-zinc-950/80 p-1">
-        <img
-          src={item.image}
-          alt={item.title}
-          className="h-full w-full object-contain object-center"
-        />
-      </div>
-
-      <div className="relative z-10 text-center md:text-left">
-        <h3 className="text-base font-semibold text-white tracking-wide">
-          {item.title}
-        </h3>
-        <p className="text-xs text-zinc-400 mt-1.5 leading-relaxed line-clamp-2">
-          {item.description}
-        </p>
-      </div>
-    </div>
   );
 }

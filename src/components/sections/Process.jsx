@@ -87,7 +87,7 @@ export default function Process() {
               </div>
 
               {/* Title */}
-              <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight leading-tight">
+              <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight leading-tight uppercase">
                 Our 7 Step
                 <br />
                 Process

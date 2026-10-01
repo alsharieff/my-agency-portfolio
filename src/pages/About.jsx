@@ -44,7 +44,7 @@ const timelineData = [
     icon: Briefcase,
     role: "Web Developer",
     company: "Custom Themes & Engineering",
-    period: "Active",
+    period: "May 2026 - October 2026",
     datetime: "2023",
     desc: "Building lightweight, custom WordPress themes from scratch with clean PHP hooks and structured DOM components, alongside pixel-perfect 1:1 Figma-to-Elementor conversions.",
   },

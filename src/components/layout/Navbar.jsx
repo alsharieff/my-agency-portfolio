@@ -116,7 +116,7 @@ const Navbar = () => {
             {/* Desktop / Tablet "Let's Talk" Button */}
             <Link
               to="/contact"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 text-white font-semibold text-sm hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 text-white font-semibold text-sm"
             >
               <span>Let's Talk</span>
               <svg
