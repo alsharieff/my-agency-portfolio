@@ -26,13 +26,13 @@ export default function About() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch transition-all duration-500 ease-in-out">
           {/* CENTER COLUMN (PROFILE): Hidden on md (tablet), visible on mobile & lg (desktop) */}
           <div className="order-1 flex md:hidden lg:flex lg:col-span-4 lg:order-2 flex-col items-center justify-center relative my-2 lg:my-0 transition-all duration-500 ease-in-out">
-            <div className="w-full h-96 md:h-[420px] lg:h-full lg:min-h-[500px] rounded-2xl border border-zinc-800/80 bg-white overflow-hidden relative group p-2 flex flex-col justify-center items-center shadow-2xl transition-all duration-500 ease-in-out">
+            <div className="w-full h-96 md:h-[420px] lg:h-full lg:min-h-[500px] rounded-2xl border border-zinc-800/80 bg-black overflow-hidden relative group p-2 flex flex-col justify-center items-center shadow-2xl transition-all duration-500 ease-in-out">
               {/* Inner Decorative Border Frame */}
               <div className="relative w-full h-full rounded-xl overflow-hidden border border-zinc-800/60 bg-white flex items-center justify-center transition-all duration-500 ease-in-out">
                 <img
                   src={profileImg}
                   alt="Profile"
-                  className="w-full h-full object-contain md:object-cover md:object-top transition-all duration-500 ease-in-out transform group-hover:scale-105"
+                  className="w-full h-full object-contain md:object-cover md:object-top transition-all"
                 />
 
                 {/* Vignette Overlay */}
