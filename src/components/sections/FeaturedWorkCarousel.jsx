@@ -5,6 +5,59 @@ import ss3 from "../../assets/ss3.webp";
 import ss4 from "../../assets/ss4.webp";
 import ss5 from "../../assets/ss5.webp";
 
+export default function FeaturedWorkCarousel() {
+  return (
+    <section className="relative w-full bg-[#030408] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
+      {/* Ambient Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[900px] h-[300px] sm:h-[450px] bg-indigo-600/10 blur-[120px] sm:blur-[160px] pointer-events-none rounded-full" />
+
+      <div className="max-w-4xl mx-auto flex flex-col items-center relative z-10 text-center">
+        {/* Section Badge */}
+        <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-white mb-6">
+          WordPress Portfolio Notice
+        </span>
+
+        {/* Main Headline */}
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 uppercase">
+          Enterprise Work Protected by Strict Non-Disclosure Agreements
+        </h2>
+
+        {/* Explanatory Content Card */}
+        <div className="w-full bg-[#0b0f19] border border-white/10 p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl backdrop-blur-md text-left flex flex-col gap-6">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center shrink-0 text-indigo-400 font-bold text-base">
+              🔒
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2">
+                Commitment to Client Privacy & Legal Compliance
+              </h3>
+              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                Out of professional integrity and respect for former corporate
+                employers and institutional partners, direct live links or
+                repository screenshots of proprietary platforms cannot be
+                publicly exhibited here.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs text-zinc-400 font-mono">
+              Need technical verification or custom code samples?
+            </span>
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold text-sm whitespace-nowrap"
+            >
+              Get in Touch →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /*
 ================================================================================
 === COMMENTED OUT CAROUSEL CODE (Ready to be uncommented when public        ===
@@ -136,56 +189,3 @@ export function FeaturedWorkCarouselBackup() {
 }
 ================================================================================
 */
-
-export default function FeaturedWorkCarousel() {
-  return (
-    <section className="relative w-full bg-[#030408] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
-      {/* Ambient Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[900px] h-[300px] sm:h-[450px] bg-indigo-600/10 blur-[120px] sm:blur-[160px] pointer-events-none rounded-full" />
-
-      <div className="max-w-4xl mx-auto flex flex-col items-center relative z-10 text-center">
-        {/* Section Badge */}
-        <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-white mb-6">
-          Portfolio Notice
-        </span>
-
-        {/* Main Headline */}
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 uppercase">
-          Enterprise Work Protected by Strict Non-Disclosure Agreements
-        </h2>
-
-        {/* Explanatory Content Card */}
-        <div className="w-full bg-[#0b0f19] border border-white/10 p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl backdrop-blur-md text-left flex flex-col gap-6">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center shrink-0 text-indigo-400 font-bold text-base">
-              🔒
-            </div>
-            <div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-2">
-                Commitment to Client Privacy & Legal Compliance
-              </h3>
-              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
-                Out of professional integrity and respect for former corporate
-                employers and institutional partners, direct live links or
-                repository screenshots of proprietary platforms cannot be
-                publicly exhibited here.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-xs text-zinc-400 font-mono">
-              Need technical verification or custom code samples?
-            </span>
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold text-sm whitespace-nowrap"
-            >
-              Get in Touch →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}

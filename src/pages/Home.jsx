@@ -1,5 +1,6 @@
 import Hero from "../components/sections/Hero";
 import Featured from "../components/sections/Featured";
+import FeaturedServices from "../components/sections/FeaturedServices";
 import FeaturedCarousel from "../components/sections/FeaturedWorkCarousel";
 import About from "../components/sections/About";
 import Process from "../components/sections/Process";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <Featured />
+      <FeaturedServices />
       <FeaturedCarousel />
       <Process />
       <About />
