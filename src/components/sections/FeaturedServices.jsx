@@ -25,9 +25,9 @@ export default function FeaturedServices() {
   };
 
   return (
-    <section className="relative w-full bg-[#030408] text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans border-b border-white/5">
+    <section className="relative w-full bg-[#030408] text-white sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
       {/* Minimal Red Accent Glow (Subtle Right Background Bleed) */}
-      <div className="absolute top-1/2 -right-32 -translate-y-1/2 w-[400px] sm:w-[600px] h-[300px] sm:h-[450px] bg-red-600/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 -right-32 -translate-y-1/2 w-[400px] sm:w-[600px] h-[300px] sm:h-[450px]" />
 
       <div className="max-w-4xl mx-auto flex flex-col relative z-10">
         {/* Minimalist Section Header */}
@@ -78,7 +78,7 @@ export default function FeaturedServices() {
                     key={idx}
                     className="flex items-start gap-2.5 text-xs text-zinc-400"
                   >
-                    <Check className="w-3.5 h-3.5 text-red-400 shrink-0 mt-0.5" />
+                    <Check className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}

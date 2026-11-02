@@ -1,5 +1,6 @@
 import Hero from "../components/sections/Hero";
 import Featured from "../components/sections/Featured";
+import SEOFeatured from "../components/sections/SEOFeatured";
 import FeaturedServices from "../components/sections/FeaturedServices";
 import FeaturedCarousel from "../components/sections/FeaturedWorkCarousel";
 import About from "../components/sections/About";
@@ -12,9 +13,10 @@ export default function Home() {
     <>
       <Hero />
       <Featured />
+      <SEOFeatured />
       <FeaturedServices />
       <FeaturedCarousel />
-      <Process />
+      {/* <Process /> */}
       <About />
       <Cta />
       <Contact />

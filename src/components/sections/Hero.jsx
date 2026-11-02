@@ -239,15 +239,15 @@ export default function Hero() {
       </div>
 
       {/* Main Heading */}
-      <h2 className="uppercase text-3xl sm:text-5xl font-extrabold tracking-tight text-center max-w-3xl mt-2 text-white text-glow px-2">
-        WordPress Built for Speed & Search Rankings
-      </h2>
+      <h1 className="uppercase text-3xl sm:text-5xl font-extrabold tracking-tight text-center max-w-3xl mt-2 text-white text-glow px-2">
+        Technical SEO for iGaming Speed & Rankings
+      </h1>
 
       {/* Subtitle */}
       <p className="mt-3 text-zinc-400 text-center max-w-xl text-sm sm:text-base leading-relaxed font-normal px-4">
-        Custom, fast WordPress sites structured specifically for SEO combining
-        clean PHP hooks, optimized site hierarchy, and modern tools to boost
-        rankings.
+        High performance architecture engineered for competitive iGaming markets
+        delivering rapid load speeds, clean crawlability, and scalable search
+        growth.
       </p>
 
       {/* Dual Marquee Ticker Section */}
